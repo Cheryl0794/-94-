@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>测试网站1号</title>
     <style>
-        /* 添加全局响应式样式 */
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* 手机端 */
+    @media (max-width: 480px) {
         img {
-            max-width: 100%;  /* 图片最大宽度为容器宽度 */
-            height: auto;     /* 高度自动调整，保持比例 */
-            display: block;   /* 避免图片下方留白 */
-            margin: 0 auto;   /* 居中显示（可选） */
+            width: 100%;
         }
-    </style>
+    }
+
+    /* 平板端 */
+    @media (min-width: 481px) and (max-width: 768px) {
+        img {
+            max-width: 80%;
+        }
+    }
+
+    /* 电脑端 */
+    @media (min-width: 769px) {
+        img {
+            max-width: 60%;
+        }
+    }
+</style>
 </head>
 <body>
     <h1>第二轮测试开始啦！</h1>
